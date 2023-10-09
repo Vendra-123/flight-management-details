@@ -1,0 +1,82 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="https://preview.colorlib.com/theme/gotrip/assets/img/logo/logo.png" alt="Logo" class="navbar-logo">
+  </a>
+  <ul class="navbar-nav">
+   
+    
+    <li>
+      <a *ngIf="userService.isUserLoggedIn()" href="#">FLightServices
+      <i class="fas fa-caret-down"></i>
+      </a>
+      <ul>
+         <li><a *ngIf="userService.isUserLoggedIn()" href="see-all-flights">FlightList</a></li>
+         <li><a *ngIf="userService.isUserLoggedIn()" href="create-flight">AddNewFlight</a></li>
+         
+      </ul>
+   </li>
+    <li>
+          <a *ngIf="userService.isUserLoggedIn()" href="#">CompanyServices
+          <i class="fas fa-caret-down"></i>
+          </a>
+          <ul>
+             <li><a *ngIf="userService.isUserLoggedIn()" href="flight-company-list">CompanyList</a></li>
+             <li><a *ngIf="userService.isUserLoggedIn()" href="create-flight-company">AddNew</a></li>
+            
+          </ul>
+        </li>
+          <li>
+            <a *ngIf="userService.isUserLoggedIn()" href="#">AirportServices
+            <i class="fas fa-caret-down"></i>
+            </a>
+            <ul>
+               <li><a *ngIf="userService.isUserLoggedIn()" href="airport-list">AirportList</a></li>
+               <li><a *ngIf="userService.isUserLoggedIn()" href="create-airport">AddNew</a></li>
+              
+            </ul>
+         </li>
+         <li class="nav-item">
+          <a *ngIf="userService.isUserLoggedIn()" routerLink="about-us" routerLinkActive="active" class="nav-link">
+            AboutUs <i class="fas fa-users"></i></a>
+            <li>
+              <li class="nav-item">
+                <a *ngIf="userService.isUserLoggedIn()" routerLink="contact-us" routerLinkActive="active" class="nav-link">
+                  ContactUs <i class="fas fa-phone"></i></a>
+                  <li>
+                    
+                        
+    
+        
+    <li class="nav-item">
+      <a *ngIf="userService.isUserLoggedIn()" routerLink="logout" routerLinkActive="active" class="nav-link">
+ Logout<i class="fas fa-sign-out-alt"></i></a>
+</li>
+
+
+<li class="nav-item">
+  <a *ngIf="!userService.isUserLoggedIn()" routerLink="sign-in" class="login-link">
+    <i class="fa fa-sign-in"></i>  
+      <span class="nav-item">Login</span>
+  </a>
+
+</li>
+
+
+    
+
+   
+    
+  </ul>
+</nav>
+
+<h1 class="text-center"> {{title}} </h1>
+
+<div class="container">
+  <nav>
+    <router-outlet></router-outlet>
+  </nav>
+  
+<section></section>
+
+</div>

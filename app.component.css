@@ -1,0 +1,118 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #063247;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a.active {
+    color: #23dbdb;
+}
+
+/* Dropdown */
+.navbar-nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #063247;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-10px);
+    border-top: 3px solid #23dbdb;
+}
+
+.navbar-nav li:hover > ul {
+    
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+
+    
+.navbar-nav ul li a {
+    width: 200px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav li {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-nav ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        border-top: none;
+    }
+    
+}.navbar {
+    display: flex;
+    justify-content: space-between; /* This will push items to the edges of the navbar */
+    padding: 10px; /* Optional: Some padding for better appearance */
+}
+
+.nav-item {
+    margin-left: auto; /* This will push the nav-item to the right */
+}
+/* Assuming the parent of .nav-item is a flex container */
+.parent-of-nav-item {
+    display: flex;
+    justify-content: space-between; 
+}
+.nav-link:hover {
+    text-decoration: underline;  /* Add underline on hover */
+    cursor: pointer;  /* Change cursor to pointer/hand icon */
+}
+
+/* If you want to add some transition effect */
+.nav-link {
+    transition: text-decoration 0.3s ease-in-out;
+}
+
